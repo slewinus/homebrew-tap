@@ -1,26 +1,26 @@
 class Klef < Formula
   desc "Local-first vault for API keys, backed by the OS keychain"
   homepage "https://github.com/slewinus/klef"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/slewinus/klef/releases/download/v#{version}/klef-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "f1c02862a66346ad0af99f73b694677d080699fadb8d0220987ec54a67409805"
+      sha256 "c423cf052b3fa076425aee46c3afcac03ce861732a2b884fe5247ab35769ae1c"
     else
       url "https://github.com/slewinus/klef/releases/download/v#{version}/klef-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "a620ac5e74c5ea5f8d4c6d1082016ac5a72071591671c31a67c12c7cc1d4c85c"
+      sha256 "bbc932679fcc19ca1d2b157a71265285b06b6c0e8fe52d5d77aa0d3f7a4d5c48"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/slewinus/klef/releases/download/v#{version}/klef-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "7d6550593fc256f58a9872ead8e8ab79e33c6700bebd2af7a8ad0da853b19171"
+      sha256 "f17b1ac2ebe8b4d5ab99daf8e082791702aa6ca0c103096de9e829e61a5b2084"
     else
       url "https://github.com/slewinus/klef/releases/download/v#{version}/klef-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1a87783fa1394ed0861eafe2993d86d75c2d085623f21525223706e2116e02bc"
+      sha256 "28aba5997581c67d8fe8d0dcc2cb56e37db8ecd5332620bf68cffd42398a080f"
     end
   end
 
