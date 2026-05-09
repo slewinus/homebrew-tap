@@ -4,7 +4,12 @@ class Klef < Formula
   version "0.4.0"
   license "MIT"
 
+  # On macOS, also pull in the GUI menu-bar app from the sibling cask,
+  # so `brew install klef` lands the CLI on $PATH AND klef.app in
+  # /Applications in one shot. Linux users get just the CLI.
   on_macos do
+    depends_on cask: "slewinus/tap/klef-gui"
+
     if Hardware::CPU.arm?
       url "https://github.com/slewinus/klef/releases/download/v#{version}/klef-v#{version}-aarch64-apple-darwin.tar.gz"
       sha256 "c423cf052b3fa076425aee46c3afcac03ce861732a2b884fe5247ab35769ae1c"
