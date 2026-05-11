@@ -1,6 +1,6 @@
 cask "klef" do
-  version "0.4.0"
-  sha256 "4eae7f2da15362ca5db19d5ed11c4a1a87d6454b14041d1607ce986a6e13d4af"
+  version "0.4.1"
+  sha256 "fccd5a0910e6b620afd04293248cdf80239b84420865747ed56aa97dbec1d41b"
 
   url "https://github.com/slewinus/klef/releases/download/v#{version}/klef-gui-v#{version}-aarch64-apple-darwin.dmg"
   name "klef"
